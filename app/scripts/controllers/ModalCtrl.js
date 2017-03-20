@@ -1,6 +1,6 @@
 (function() {
     function ModalCtrl(Room, $uibModalInstance) {
-        this.roomName = "Room Name";
+        this.roomName = null;
         this.ok = function() {
             if(this.roomName){
                 Room.add(this.roomName);
