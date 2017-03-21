@@ -2,9 +2,7 @@
     function HomeCtrl(Room, Message, $uibModal){
         this.roomData = Room.all;
         this.activeRoom = null;
-        this.messages = function(roomId) {
-            return Message.getByRoomId(roomId);
-        }
+        this.messages = [];
         this.open = function() {
             $uibModal.open({
                 templateUrl: '/templates/modal.html',
@@ -14,6 +12,7 @@
         };
         this.select = function(room) {
             this.activeRoom = room;
+            this.messages = Message.getByRoomId(room.$id);
         }
     }
     

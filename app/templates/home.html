@@ -9,7 +9,7 @@
     </aside>
     <main class="col-sm-9 col-md-10">
         <h2>{{home.activeRoom.roomName}}</h2>
-        <div ng-repeat="message in home.messages(home.activeRoom.$id)">
+        <div ng-repeat="message in home.messages">
             <ul>
                 <li>{{message.content}}</li>
             </ul>
