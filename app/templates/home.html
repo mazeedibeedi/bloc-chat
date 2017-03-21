@@ -1,9 +1,18 @@
-<section>
-    <h2>Bloc Chat</h2>
-    <button class="btn btn-primary" type="button" ng-click="home.open()">New Room</button>
-    <div ng-repeat="room in home.roomData">
-        <ul>
-            <li>{{room.roomName}}</li>
-        </ul>
-    </div>
-</section>
+<div class="row">
+    <aside class="col-sm-3 col-md-2 sidebar">
+        <button class="btn btn-primary" type="button" ng-click="home.open()">New Room</button>
+        <div ng-repeat="room in home.roomData">
+            <ul>
+                <li ng-click="home.select(room)">{{room.roomName}}</li>
+            </ul>
+        </div>
+    </aside>
+    <main class="col-sm-9 col-md-10">
+        <h2>{{home.activeRoom.roomName}}</h2>
+        <div ng-repeat="message in home.messages(home.activeRoom.$id)">
+            <ul>
+                <li>{{message.content}}</li>
+            </ul>
+        </div>
+    </main>
+</div>
