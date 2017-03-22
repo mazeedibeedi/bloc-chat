@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <title>Bloc Chat</title>
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/room.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 <body>
     <nav class="navbar">
-        <a ui-sref="home" class="logo">
-            HOME
-        </a>
+        Bloc Chat
     </nav>
     <ui-view></ui-view>
     
@@ -42,7 +42,8 @@
     
     <script src="scripts/app.js"></script>
     <script src="scripts/controllers/HomeCtrl.js"></script>
-    <script src="scripts/services/Room.js"></script>
     <script src="scripts/controllers/ModalCtrl.js"></script>
+    <script src="scripts/services/Room.js"></script>
+    <script src="scripts/services/Message.js"></script>
 </body>
 </html>
