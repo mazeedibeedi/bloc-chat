@@ -1,5 +1,17 @@
+ul {
+    list-style-type: none;
+}
 .sidebar{
     top: auto;
     bottom: 0;
     border-right: 1px solid black;
+}
+
+.username {
+    font-weight: bold;
+    padding-top: 5px;
+}
+
+.content {
+    padding-bottom: 5px;
 }
