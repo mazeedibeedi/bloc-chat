@@ -2,7 +2,7 @@
     <aside class="col-sm-3 col-md-2 sidebar">
         <button class="btn btn-primary" type="button" ng-click="home.open()">New Room</button>
         <div ng-repeat="room in home.roomData">
-            <ul>
+            <ul class="rooms">
                 <li ng-click="home.select(room)">{{room.roomName}}</li>
             </ul>
         </div>
@@ -10,9 +10,17 @@
     <main class="col-sm-9 col-md-10">
         <h2>{{home.activeRoom.roomName}}</h2>
         <div ng-repeat="message in home.messages">
-            <ul>
-                <li>{{message.content}}</li>
+            <ul class="messages">
+                <li class="username">{{message.username}}</li>
+                <li class="content">{{message.content}}</li>
             </ul>
+            <aside class="sidebar">{{message.sentAt | date:'h:mm a'}}</aside>
         </div>
     </main>
+    <footer class="footer">
+        <div class="container">
+            <input class="col-sm-9 col-md-10" ng-model="home.message" placeholder="Message {{home.activeRoom.roomName}}">
+            <button class="col-sm-3 col-sm-2 btn btn-primary" type="button" ng-click="home.send()">Send</button>
+        </div>
+    </footer>
 </div>
